@@ -6,7 +6,7 @@ echo Compiling
 cargo build --target=wasm32-unknown-unknown
 
 echo Bindgen
-wasm-bindgen --target=web --out-dir=./target/wasm-bindgen/debug ./target/wasm32-unknown-unknown/debug/yew_front.wasm --no-typescript
+wasm-bindgen --target=web --out-dir=./target/wasm-bindgen/debug ./target/wasm32-unknown-unknown/debug/yew_wasm.wasm --no-typescript
 
 if ! [ -d "out" ]; then
     echo Creating ouput directory
@@ -25,12 +25,12 @@ cat << EOF > ./out/index.html
     <title>Yew • Counter</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <script type='module'>
-      import init from './yew_front.js';
-      init('yew_front_bg.wasm');
+      import init from './yew_wasm.js';
+      init('yew_wasm_bg.wasm');
     </script>
     
-    <!--   <link rel='preload' href='./yew_front_bg.wasm' as='fetch' type='application/wasm' crossorigin=''>
-      <link rel='modulepreload' href='./yew_front.js'> -->
+    <!--   <link rel='preload' href='./yew_wasm_bg.wasm' as='fetch' type='application/wasm' crossorigin=''>
+      <link rel='modulepreload' href='./yew_wasm.js'> -->
   </head>
   <body>
   </body>
