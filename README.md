@@ -13,7 +13,7 @@ I chose [yew](https://github.com/yewstack/yew) as my front-end framework.
 This tutorial will be on how to run [this yew counter example](https://github.com/yewstack/yew/tree/master/examples/counter) with a demo python webserver (`python -m http.server`).
 
 ## Tools
-I will only use cargo,  [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) version (0.2.89 latest for me).
+I will only use cargo,  [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) (0.2.89 latest for me).
 ```sh
 cargo install --locked wasm-bindgen-cli
 ```
