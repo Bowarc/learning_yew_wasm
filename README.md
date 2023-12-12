@@ -13,10 +13,11 @@ I chose [yew](https://github.com/yewstack/yew) as my front-end framework.
 This tutorial will be on how to run [this yew counter example](https://github.com/yewstack/yew/tree/master/examples/counter) with a demo python webserver (`python -m http.server`).
 
 ## Tools
-I will only use cargo and [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen).
+I will only use cargo,  [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen) version (0.2.89 latest for me).
 ```sh
 cargo install --locked wasm-bindgen-cli
 ```
+and Python 3.12.0 (tho any python being able to run a simple http server will do the job)
 
 ## Problems
 Every docs i could find would else be doing really simple stuff like adding numbers
