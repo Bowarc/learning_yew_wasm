@@ -45,7 +45,7 @@ Compile with cargo, execute [wasm-bindgen](https://github.com/rustwasm/wasm-bind
 
 
 ## How to use
-Clone this repo
+Clone this repo  
 Compile and serve with python webserver using 
 ```sh
 sh build.sh
