@@ -56,4 +56,4 @@ To use with any other webserver, just take the content of the `./out` directory 
 
 
 ## TLDR
-Check [this script to build from main.rs](build_main.sh) [or this one to build from lib.rs](build_lib.sh)
+Check [this script to build from main.rs](build_main.sh) or [this one to build from lib.rs](build_lib.sh)
