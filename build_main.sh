@@ -1,12 +1,20 @@
 #!/bin/sh
+set -e
 
 RUST_LOG="walrus=error"
 
+mode=release # debug, release
+
 echo Compiling
-cargo build --target=wasm32-unknown-unknown
+if [ "$mode" = release ]
+then
+  cargo build --release --target=wasm32-unknown-unknown
+else
+  cargo build --target=wasm32-unknown-unknown
+fi
 
 echo Bindgen
-wasm-bindgen --target=web --out-dir=./target/wasm-bindgen/debug ./target/wasm32-unknown-unknown/debug/yew_wasm.wasm --no-typescript
+wasm-bindgen --target=web --out-dir=./target/wasm-bindgen/$mode ./target/wasm32-unknown-unknown/$mode/yew_wasm.wasm --no-typescript
 
 if ! [ -d "out" ]; then
     echo Creating ouput directory
@@ -15,7 +23,7 @@ else
     echo Updating ouput directory
 fi
 
-cp ./target/wasm-bindgen/debug/* ./out 
+cp ./target/wasm-bindgen/$mode/* ./out 
 
 cat << EOF > ./out/index.html
 <!DOCTYPE html>
