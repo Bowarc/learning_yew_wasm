@@ -59,6 +59,6 @@ To use with any other webserver, just take the content of the `./out` directory 
 Check [this script to build from main.rs](build_main.sh) or [this one to build from lib.rs](build_lib.sh)
 
 ## Usefull resources
-https://developer.mozilla.org/en-US/docs/WebAssembly
-https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running
+https://developer.mozilla.org/en-US/docs/WebAssembly  
+https://developer.mozilla.org/en-US/docs/WebAssembly/Loading_and_running  
 https://cliffle.com/blog/bare-metal-wasm/
