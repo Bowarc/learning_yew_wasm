@@ -24,7 +24,7 @@ Every docs i could find would else be doing really simple stuff like adding numb
 or using trunk to compile and serve their application
 which is already cool but not what i want.
 
-~~I tried using [wasm-pack](https://github.com/rustwasm/wasm-pack) which requires the project to be a lib to then be manually called by you in the js but could not find a way to execute my yew app with it (probably just some sort of export mistake on my part)~~.
+~~I tried using [wasm-pack](https://github.com/rustwasm/wasm-pack) which requires the project to be a lib to then be manually called by you in the js but could not find a way to execute my yew app with it (probably just some sort of export mistake on my part)~~.  
 ^ Edit: Yes it was i just updated the repo with a963ecc with an example on how to run w/ wasm-pack
 
 Then i tried using [trunk](https://github.com/trunk-rs/trunk) as the example suggested to have a better idea on how wasm worked.  
