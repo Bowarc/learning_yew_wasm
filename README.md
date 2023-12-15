@@ -24,7 +24,8 @@ Every docs i could find would else be doing really simple stuff like adding numb
 or using trunk to compile and serve their application
 which is already cool but not what i want.
 
-I tried using [wasm-pack](https://github.com/rustwasm/wasm-pack) which requires the project to be a lib to then be manually called by you in the js but could not find a way to execute my yew app with it (probably just some sort of export mistake on my part).
+~~I tried using [wasm-pack](https://github.com/rustwasm/wasm-pack) which requires the project to be a lib to then be manually called by you in the js but could not find a way to execute my yew app with it (probably just some sort of export mistake on my part)~~.
+^ Edit: Yes it was i just updated the repo with a963ecc with an example on how to run w/ wasm-pack
 
 Then i tried using [trunk](https://github.com/trunk-rs/trunk) as the example suggested to have a better idea on how wasm worked.  
 As expected, it worked.  
@@ -36,7 +37,7 @@ I couldn't find a way to make it work with the python webserver as trunk uses tr
 <link data-trunk rel="sass" href="index.scss" />
 ```
 
-I then found that with some small modification i was able to run what [trunk](https://github.com/trunk-rs/trunk) had built with a demo python server (`python -m http.server`)
+I then found that with some small modification i was able to run what [trunk](https://github.com/trunk-rs/trunk) had built with a demo python server.
 
 After that, when looking at how [trunk](https://github.com/trunk-rs/trunk) worked i saw that it was just a wrapper arround [wasm-bindgen](https://github.com/rustwasm/wasm-bindgen).
 
@@ -55,4 +56,4 @@ To use with any other webserver, just take the content of the `./out` directory 
 
 
 ## TLDR
-Check [build.sh](build.sh)
+Check [this script to build from main.rs](build_main.sh) [or this one to build from lib.rs](build_lib.sh)
